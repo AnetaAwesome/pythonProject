@@ -1,0 +1,13 @@
+{% extends 'blog_app/base.html' %}
+
+{% block main_content %}
+<form action="" method="post" novalidate>
+    {% csrf_token %}
+    <table>
+        {{ form }}
+        <tr><td>{% if cancel %} Anuluj {% endif %} </td><td><input type="submit" value="Wyślij"></td></tr>
+    </table>
+</form>
+
+{% endblock %}
+
