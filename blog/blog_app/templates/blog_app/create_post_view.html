@@ -1,11 +1,13 @@
 {% extends 'blog_app/base.html' %}
 
+<title> {% block title %} My blog {% endblock %}</title>
+
 {% block main_content %}
 <form action="" method="post" novalidate>
     {% csrf_token %}
     <table>
         {{ form }}
-        <tr><td>{% if cancel %} Anuluj {% endif %} </td><td><input type="submit" value="Wyślij"></td></tr>
+        <tr><td>{% if cancel %} Anuluj {% endif %} </td><td><input type="submit" value="Submit"></td></tr>
     </table>
 </form>
 
